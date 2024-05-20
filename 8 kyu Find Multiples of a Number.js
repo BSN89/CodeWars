@@ -14,5 +14,5 @@ function findMultiples(integer, limit) {
        arr.push(i)
     }
     return arr
-    }
+    } 
   
