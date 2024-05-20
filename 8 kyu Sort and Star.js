@@ -15,4 +15,3 @@ function twoSort(s) {
 
     
     console.log(twoSort(arr2));
-    
