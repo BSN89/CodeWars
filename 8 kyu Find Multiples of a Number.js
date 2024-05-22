@@ -8,12 +8,37 @@
 // and 6 are the multiples of 2 up to 6.
 
 
-function findMultiples(integer, limit) {
-    let arr = []
-    for( let i = integer; i <= limit; i += integer){
-       arr.push(i)
-    }
-    
-    return arr
-    } 
-  
+// function findMultiples(integer, limit) {
+//     let arr = []
+//     for( let i = integer; i <= limit; i += integer){
+//        arr.push(i)
+//     }
+
+//     return arr
+//     } 
+
+
+
+
+
+
+
+const obj = {
+   name: 'John',
+   age: 30,
+   addres: {
+      city: 'Rim',
+      hobby: {
+        gaming: 'video games'}
+   }
+}
+// const objCopy = {...odj, addres: {...odj.addres, hobby: {...odj.addres.hobby}} }
+const json = JSON.stringify(obj)
+const objCopy = JSON.parse(json)
+
+objCopy.addres.city = 'Miami'
+objCopy.addres.hobby.gaming = 'no hobby'
+
+
+console.log(obj);
+console.log(objCopy);
