@@ -40,5 +40,6 @@ objCopy.addres.city = 'Miami'
 objCopy.addres.hobby.gaming = 'no hobby'
 
 
+
 console.log(obj);
 console.log(objCopy);
