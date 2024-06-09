@@ -22,7 +22,8 @@ var countSheep = function (num){
     for(let i = 0; i <= num; i++){
         i+1
         return  `${i} sheep...`
-      }
+      
+    }
   }
     
     console.log(countSheep(4));
