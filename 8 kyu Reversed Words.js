@@ -18,12 +18,13 @@
 //   console.log(reverseWords(firstString));
 
 var countSheep = function (num){
-    
-    for(let i = 0; i <= num; i++){
-        i+1
-        return  `${i} sheep...`
+    let result = ''
+    for(let i = 1; i <= num; i++){
+        
+       result += `${i} sheep...`
       
     }
+    return result
   }
     
     console.log(countSheep(4));
