@@ -11,18 +11,28 @@
 // longest(a, a) -> "abcdefghijklmnopqrstuvwxyz
 
 
-a = "xyaabbbccccdefww"
-b = "xxxxyyyyabklmopq"
+// a = "xyaabbbccccdefww"
+// b = "xxxxyyyyabklmopq"
 
-function longest(s1, s2) {
-  let arrResult = [...s1,  ...s2].sort()
-  let arr = []
-  arrResult.reduce((acc, el) => {
-      if(!acc.includes(el)){
-        arr.push(el)
-      }
-      return el
-  },[])
- return arr.join('')
-}
-console.log(longest(a, b));
+// function longest(s1, s2) {
+//   let arrResult = [...s1,  ...s2].sort()
+//   let arr = []
+//   arrResult.reduce((acc, el) => {
+//       if(!acc.includes(el)){
+//         arr.push(el)
+//       }
+//       return el
+//   },[])
+//  return arr.join('')
+// }
+// console.log(longest(a, b));
+
+function solution(str, ending){
+    if(str[-1] !== ending[-1]){
+      return true
+    }
+    return false
+  }
+
+  //console.log(solution('abc', 'bc'))
+  console.log(solution('abc', 'd') )
