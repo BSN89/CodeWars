@@ -12,9 +12,9 @@
 // wave("hello") => ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
 
 function wave(str){
-    let result = [...str]
-
-    return result
+    return str.split(' ').array.forEach(el => {
+        
+    });
   }
 
   console.log(wave('hello'));
