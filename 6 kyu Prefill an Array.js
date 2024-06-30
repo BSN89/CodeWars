@@ -27,12 +27,15 @@
 
 
 function prefill(n, v) {
-    let arr = []
-    for (let i = 0; i < n; i++) {
-        arr.push(v)
+    
+    let num = +n
+    if(isNaN(num)){
+      return `${n} is invalid`
     }
-    return arr
+    
+    return Array(n).fill(v)
   }
   console.log(prefill(3, 1));
   console.log(prefill(3, prefill(2,'2d')));
   console.log(prefill('xyz', 1));
+  console.log(prefill("1", 1))
