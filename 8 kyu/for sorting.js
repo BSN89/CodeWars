@@ -1,5 +1,6 @@
 //sorting
 
+
 const students = ["Bob", "Alex", "Liza", "Ivan", "maksim"];
 
 console.log(students.sort());

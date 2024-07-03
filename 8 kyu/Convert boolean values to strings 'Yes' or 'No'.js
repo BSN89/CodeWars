@@ -4,4 +4,4 @@ const boolToWord = (bool) => {
   } else if (bool == false) {
     return "No";
   }
-};
+}
