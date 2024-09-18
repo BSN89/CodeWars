@@ -49,5 +49,13 @@ let arr1 = [9, 45, 53, 10, 100, 30, 85, 72, 69, 93, 98, 27, 73, 82, 91, 60, 5, 7
             }
             return array
         }
+let result = []
+        //console.log(sumArr(arr));
 
-        console.log(sumArr(arr));
+        for (let i = 0; i < arr3.length; i++) {
+            if(!arr.includes(arr3[i])){
+                result.push(arr3[i])
+            }
+            
+        }
+        console.log(result);
