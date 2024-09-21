@@ -16,7 +16,7 @@ function multiples(m, n){
          res += n 
       arr.push(res)
     }
-    return arr
+    return arr 
   }
 
   console.log(multiples(3, 5));
