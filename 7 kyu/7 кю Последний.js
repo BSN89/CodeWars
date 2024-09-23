@@ -12,24 +12,21 @@
 // last([[1, 2], [3, 4]])  ==>  [3, 4]
 
 
-function last(element) {
-  if(Array.isArray(element)){
-   return element.pop()
-  }
-  else if(!Array.isArray(element)){
-    return element.pop()
-}
-    else if(typeof element === "string"){
-      return element.slice(-1)
-  }else{
-    return [element].pop()
-  }
+function last(...element) {
+    if(element.length === 1){
+        let arg = element[0]
+        if(Array.isArray(arg) || typeof arg === 'string'){
+            return arg[arg.length -1]
+           }
+    }
+    return element[element.length - 1];
 
 }
+
 
 console.log(last(5));
 console.log(last("xyz"));
 console.log(last([1, 2, 3]));
 console.log(last([1, 2, 3, [4, 5]]));
 console.log(last(1, 2, 3));
-console.log(last([1], [2], [3]));
+console.log(last([1], [2], [3]))
