@@ -19,5 +19,5 @@ function capitalize(s,arr){
   };
 
   console.log(capitalize("abcdef",[1,2,5])); // 'aBCdeF'
-  //console.log(capitalize("codewars",[1,3,5,50])); // 'cOdEwArs'
-  //console.log(capitalize("abracadabra",[2,6,9,10])); // 'abRacaDabRA'
+  console.log(capitalize("codewars",[1,3,5,50])); // 'cOdEwArs'
+  console.log(capitalize("abracadabra",[2,6,9,10])); // 'abRacaDabRA'
