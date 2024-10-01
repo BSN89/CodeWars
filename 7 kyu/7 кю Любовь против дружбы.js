@@ -12,21 +12,37 @@
 // Ввод всегда будет состоять только из строчных букв и никогда не будет пустым.
 
 function wordsToMarks(string){
-    // const objCount = {};
-    // for (let i = 0; i < 26; i++) {
-    //   const letter = String.fromCharCode(97 + i); // 97 - код символа 'a'
-    //   objCount[letter] = i + 1;
-    // }
+    const objCount = {};
+    for (let i = 0; i < 26; i++) {
+      const letter = String.fromCharCode(97 + i); // 97 - код символа 'a'
+      objCount[letter] = i + 1;
+    }
     let result = 0
     for (let j = 0; j < string.length; j++) {
+        for (let key in objCount) {
+            if (key === string[j]) {
+              result += objCount[key]
+            }
+          
+        }
         
-        result += string[j].charCodeAt(0)
     }
     return result
   }
+  // ИЛИ 
+
+  function wordsToMarks2(string) {
+    return string.split('')
+    .map(char => char.charCodeAt(0) - 96)
+    .reduce((sum, num) => sum + num, 0);
+  }
+  //ИЛИ
+  const wordsToMarks3 = s => [...s]
+  .reduce((res, c) => res += c.charCodeAt() - 96, 0)
+
 
 
 console.log(wordsToMarks("attitude"));
-console.log(wordsToMarks("friends"));
-console.log(wordsToMarks("family"));
-console.log(wordsToMarks("knowledge"));
+ console.log(wordsToMarks3("friends"));
+ console.log(wordsToMarks2("family"));
+ console.log(wordsToMarks2("knowledge"));
