@@ -19,7 +19,7 @@ let result = ''
 let replaceStr = text.replace(/[^a-z]/gi, '')
 for (let i = 0; i < replaceStr.length; i++) {
     
-    result +=  replaceStr[i].toLowerCase().charCodeAt(0) - 96 + ' '
+    result +=  replaceStr[i].toLowerCase().charCodeAt(0) - 96 + " "
      }
     return result.trim()
   }

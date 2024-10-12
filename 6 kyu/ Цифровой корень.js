@@ -19,7 +19,7 @@ function digitalRoot(n) {
   if(String(result).length > 1){
     return digitalRoot(result)
   }
-  return result
+  return  result
 }
 
 console.log(digitalRoot(942)); // 6
