@@ -11,6 +11,7 @@ function isVow(a){
     return a.map(el => {
         const char = String.fromCharCode(el)
         return regex.test(char) ? char : el
+        
     })
 }
 
