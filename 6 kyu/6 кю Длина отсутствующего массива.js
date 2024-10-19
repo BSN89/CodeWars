@@ -16,18 +16,17 @@
 // массивами.
 
 function getLengthOfMissingArray(arrayOfArrays) {
-    if(arrayOfArrays.length === 0 || arrayOfArrays === null) return 0
-    //if(arrayOfArrays.some(el => el.includes(null)) || arrayOfArrays.some(el => el.length === 0)) return 0
+    if(arrayOfArrays === null) return 0
+    if(arrayOfArrays.length === 0) return 0  
+    if (arrayOfArrays.some(el => el === null || el.length === 0)) return 0;
       let number = 0
       
       let result = arrayOfArrays
       .map(el => el.length).sort((a,b) => a - b)
   
-      for (let i = result[0]; i < result.length; i++) {
-          if(result[i] !== i + 1){
-            console.log(number) 
-             return number = i + 1
-             
+      for (let i = 0; i < result.length; i++) {
+          if(result[i + 1] !== result[i] + 1){
+             return number = result[i] + 1
           } 
       }
       return number
