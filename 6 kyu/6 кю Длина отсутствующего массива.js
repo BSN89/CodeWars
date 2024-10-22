@@ -17,6 +17,7 @@
 
 function getLengthOfMissingArray(arrayOfArrays) {
     if(arrayOfArrays === null) return 0
+    
     if(arrayOfArrays.length === 0) return 0  
     if (arrayOfArrays.some(el => el === null || el.length === 0)) return 0;
       let number = 0
