@@ -28,6 +28,7 @@ function firstNonRepeatingLetter(s) {
         odjSubStr[key] > 1 && delete odjSubStr[key]
     }
     let result = ''
+    
     let keysOfObj = Object.keys(odjSubStr)
      s.split('')
      .find(el => keysOfObj.includes(el.toLowerCase()) 

@@ -33,7 +33,7 @@ const words = ['hello', 'world', 'typescript']
 const getLength = (word: string) => word.length
  
 const lengthResults = mapArray(words, getLength)
-console.log(lengthResults) // [5, 5, 10]
+//console.log(lengthResults) // [5, 5, 10]
  
 // Пример 3: Преобразование объектов в строки
 type Person = { name: string; age: number }
@@ -44,7 +44,25 @@ const people: Person[] = [
 const toDescription = (person: Person) => `${person.name} is ${person.age} years old`
  
 const descriptions = mapArray(people, toDescription)
-console.log(descriptions) // ["Alice is 25 years old", "Bob is 30 years old"]
+//console.log(descriptions) // ["Alice is 25 years old", "Bob is 30 years old"]
+
+
+
+
+// Строки
+const stringArray = ['apple', 'banana', 'cherry']
+const result1 = updateArray(stringArray, 'banana') // ['apple', 'banana', 'cherry']
+const result2 = updateArray(stringArray, 'date') // ['apple', 'banana', 'cherry', 'date']
+ 
+// Числа
+const numberArray = [1, 2, 3]
+const result3 = updateArray(numberArray, 2) // [1, 2, 3]
+const result4 = updateArray(numberArray, 4) // [1, 2, 3, 4]
+
+function updateArray<T>(arr: T[], el: T) {
+  return arr.filter(e => !arr.includes(el) ? arr.push(el) : e)
+}
+
 
 
 
