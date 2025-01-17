@@ -14,12 +14,19 @@
 // fizzbuzz(3) -->  [1, 2, "Fizz"]
 
 function fizzbuzz(n){
- return n.map(el => el % 3 === 0 
-    ? "Fizz" 
+    let arrN = []
+  for(let i = 1; i <= n; i++){
+    arrN.push(i)
+  }
+  return arrN.map(el => 
+     el % 5 === 0 && el % 3 === 0
+    ? "FizzBuzz"
     : el % 5 === 0 
-    ? 'Buzz' 
+    ? 'Buzz'
+    : el % 3 === 0
+    ? "Fizz"
     : el )
 }
 
-console.log(fizzbuzz([1,2,3,4,5,6,7,8,9,10]))
-console.log(fizzbuzz([3,3,3,5,5,6,6]))
+console.log(fizzbuzz(10))
+console.log(fizzbuzz(30))
